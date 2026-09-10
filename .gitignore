@@ -3,7 +3,8 @@ __pycache__/
 *.pyo
 .env
 .DS_Store
-.venv/
+.venv
+.venv.nosync/
 venv/
 .state/
 supabase/.temp/
