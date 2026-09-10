@@ -488,5 +488,19 @@
     "status": "new",
     "added_at": "2026-09-08",
     "fingerprint": "canaria-gran-hoyos-independiente-marzagan-montaneta-palmas|"
+  },
+  {
+    "id": "idealista-fd452071",
+    "title": "Casa o chalet independiente en el fondillo, Tafira, Las Palmas de Gran Canaria",
+    "price": 199990,
+    "bedrooms": 3,
+    "year": null,
+    "location": "el fondillo, Tafira, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112506750/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d7/66/c0/1472261792.jpg",
+    "status": "new",
+    "added_at": "2026-09-10",
+    "fingerprint": "canaria-fondillo-gran-independiente-palmas-tafira|"
   }
 ]

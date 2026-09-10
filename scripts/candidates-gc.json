@@ -838,5 +838,19 @@
     "status": "new",
     "added_at": "2026-09-07",
     "fingerprint": "54-adosado-baroja-calle-hombre-pio-playa-salinetas-taliarte-telde|"
+  },
+  {
+    "id": "idealista-64591068",
+    "title": "Casa o chalet independiente en Paseo San Jose, 65, Bañaderos-El Puertillo-San Andrés, Arucas",
+    "price": 325000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Paseo San Jose, 65, Bañaderos-El Puertillo-San Andrés, Arucas",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112504565/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/98/a1/1c/1472203173.jpg",
+    "status": "new",
+    "added_at": "2026-09-10",
+    "fingerprint": "65-andres-arucas-banaderos-independiente-jose-paseo-puertillo-san|"
   }
 ]
