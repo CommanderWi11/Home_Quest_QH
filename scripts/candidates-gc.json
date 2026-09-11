@@ -512,7 +512,7 @@
     "location": "Concepcion a La, San José de las Vegas-La Atalaya, Santa Brigida",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112127333/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d9/72/f3/1460288984.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/38/6f/6b/1472342118.jpg",
     "status": "new",
     "added_at": "2026-08-28",
     "fingerprint": "atalaya-brigida-concepcion-independiente-jose-san-santa-vegas|"
@@ -526,7 +526,7 @@
     "location": "Buenavista, 20, Portada Verde-Lomo Espino-Guanche, Santa Brigida",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/110637069/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/24/7c/21/1460372757.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/c3/70/40/1472687431.jpg",
     "status": "new",
     "added_at": "2026-08-28",
     "fingerprint": "20-adosado-brigida-buenavista-espino-guanche-lomo-portada-santa-verde|"
@@ -852,5 +852,19 @@
     "status": "new",
     "added_at": "2026-09-10",
     "fingerprint": "65-andres-arucas-banaderos-independiente-jose-paseo-puertillo-san|"
+  },
+  {
+    "id": "idealista-012f2660",
+    "title": "Casa o chalet independiente en Calle Planas de Poesia, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
+    "price": 317000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Calle Planas de Poesia, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112481140/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/92/89/5e/1472439850.jpg",
+    "status": "new",
+    "added_at": "2026-09-11",
+    "fingerprint": "calle-canaria-gran-hoyos-independiente-marzagan-montaneta-palmas-planas-poesia|"
   }
 ]
