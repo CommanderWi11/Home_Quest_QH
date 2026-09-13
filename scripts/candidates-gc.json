@@ -834,7 +834,7 @@
     "location": "Calle Pio Baroja, 54, Playa del Hombre - Taliarte - Salinetas, Telde",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112471586/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/bc/21/77/1471122521.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/c9/e3/ec/1471511292.jpg",
     "status": "new",
     "added_at": "2026-09-07",
     "fingerprint": "54-adosado-baroja-calle-hombre-pio-playa-salinetas-taliarte-telde|"
@@ -866,5 +866,19 @@
     "status": "new",
     "added_at": "2026-09-11",
     "fingerprint": "calle-canaria-gran-hoyos-independiente-marzagan-montaneta-palmas-planas-poesia|"
+  },
+  {
+    "id": "idealista-505b9ec2",
+    "title": "Casa de pueblo en Lugar la Pedrera, 18, Los Castillos-Los Portales-Visvique, Arucas",
+    "price": 280000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Lugar la Pedrera, 18, Los Castillos-Los Portales-Visvique, Arucas",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/104190049/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/fc/ff/8b/1212492621.jpg",
+    "status": "new",
+    "added_at": "2026-09-13",
+    "fingerprint": "18-arucas-castillos-lugar-pedrera-portales-pueblo-visvique|"
   }
 ]
