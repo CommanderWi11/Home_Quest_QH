@@ -254,7 +254,7 @@
   {
     "id": "idealista-623bcc61",
     "title": "Piso en Negrín, Las Palmas de Gran Canaria",
-    "price": 390900,
+    "price": 412900,
     "bedrooms": 3,
     "year": null,
     "location": "Negrín, Las Palmas de Gran Canaria",
@@ -456,7 +456,7 @@
     "location": "Calle Doctor Alfonso Chiscano Díaz, 12, Negrín, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112451499/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/98/75/24/1470432749.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/9f/8b/ee/1473951099.jpg",
     "status": "new",
     "added_at": "2026-09-04",
     "fingerprint": "12-alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
@@ -498,9 +498,23 @@
     "location": "el fondillo, Tafira, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112506750/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d7/66/c0/1472261792.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ed/a9/f8/1472417670.jpg",
     "status": "new",
     "added_at": "2026-09-10",
     "fingerprint": "canaria-fondillo-gran-independiente-palmas-tafira|"
+  },
+  {
+    "id": "idealista-198bb010",
+    "title": "Piso en Calle Doctor Alfonso Chiscano Díaz, Negrín, Las Palmas de Gran Canaria",
+    "price": 359900,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Doctor Alfonso Chiscano Díaz, Negrín, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112560043/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/af/4f/f2/1474040118.jpg",
+    "status": "new",
+    "added_at": "2026-09-16",
+    "fingerprint": "alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
   }
 ]
