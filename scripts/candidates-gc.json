@@ -880,5 +880,47 @@
     "status": "new",
     "added_at": "2026-09-13",
     "fingerprint": "18-arucas-castillos-lugar-pedrera-portales-pueblo-visvique|"
+  },
+  {
+    "id": "idealista-e028aab2",
+    "title": "Casa rural en Lugar Mña de las Tierras, Sequero, Ingenio",
+    "price": 280000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Lugar Mña de las Tierras, Sequero, Ingenio",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112571890/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/aa/43/d6/1474469669.jpg",
+    "status": "new",
+    "added_at": "2026-09-17",
+    "fingerprint": "ingenio-lugar-mna-rural-sequero-tierras|"
+  },
+  {
+    "id": "idealista-851020b2",
+    "title": "Casa de pueblo en Gamonal Bajo, 27, San José de las Vegas-La Atalaya, Santa Brigida",
+    "price": 200000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Gamonal Bajo, 27, San José de las Vegas-La Atalaya, Santa Brigida",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112245196/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/81/15/c2/1463488355.jpg",
+    "status": "new",
+    "added_at": "2026-09-17",
+    "fingerprint": "27-atalaya-bajo-brigida-gamonal-jose-pueblo-san-santa-vegas|"
+  },
+  {
+    "id": "idealista-d26e3c76",
+    "title": "Chalet pareado en Calle de Tabaiba, 5, Mogán interior, Mogán",
+    "price": 390000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle de Tabaiba, 5, Mogán interior, Mogán",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/110516836/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/f5/04/00/1407331948.jpg",
+    "status": "new",
+    "added_at": "2026-09-17",
+    "fingerprint": "calle-interior-mogan-pareado-tabaiba|"
   }
 ]
