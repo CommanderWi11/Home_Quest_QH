@@ -86,13 +86,13 @@
   {
     "id": "idealista-69785477",
     "title": "Casa o chalet en Gc-803, Caserones - La Higuera, Telde",
-    "price": 300000,
+    "price": 270000,
     "bedrooms": 4,
     "year": null,
     "location": "Gc-803, Caserones - La Higuera, Telde",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/110872636/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/73/fe/51/1418126190.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/66/e0/d8/1418126169.jpg",
     "status": "new",
     "added_at": "2026-08-28",
     "fingerprint": "803-caserones-gc-higuera-telde|"
@@ -848,7 +848,7 @@
     "location": "Paseo San Jose, 65, Bañaderos-El Puertillo-San Andrés, Arucas",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112504565/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/98/a1/1c/1472203173.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/c5/e0/8d/1474796614.jpg",
     "status": "new",
     "added_at": "2026-09-10",
     "fingerprint": "65-andres-arucas-banaderos-independiente-jose-paseo-puertillo-san|"
@@ -922,5 +922,19 @@
     "status": "new",
     "added_at": "2026-09-17",
     "fingerprint": "calle-interior-mogan-pareado-tabaiba|"
+  },
+  {
+    "id": "idealista-3c927e94",
+    "title": "Chalet adosado en Calle Antonio Morales Rodríguez, Carrizal, Ingenio",
+    "price": 335000,
+    "bedrooms": 7,
+    "year": null,
+    "location": "Calle Antonio Morales Rodríguez, Carrizal, Ingenio",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112578556/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/16/f7/7d/1474748664.jpg",
+    "status": "new",
+    "added_at": "2026-09-18",
+    "fingerprint": "adosado-antonio-calle-carrizal-ingenio-morales-rodriguez|"
   }
 ]
