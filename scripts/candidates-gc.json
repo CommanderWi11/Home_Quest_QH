@@ -562,7 +562,7 @@
   {
     "id": "idealista-2221d82c",
     "title": "Casa o chalet independiente en Viejo s Jose De Las Vegas, San José de las Vegas-La Atalaya, Santa Brigida",
-    "price": 480000,
+    "price": 450000,
     "bedrooms": 5,
     "year": null,
     "location": "Viejo s Jose De Las Vegas, San José de las Vegas-La Atalaya, Santa Brigida",
@@ -806,7 +806,7 @@
     "location": "Calle Pérez Galdós, El Doctoral, Santa Lucía de Tirajana",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/111930678/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/85/63/4c/1453120268.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d0/1d/da/1453120252.jpg",
     "status": "new",
     "added_at": "2026-09-01",
     "fingerprint": "calle-doctoral-galdos-lucia-pareado-perez-santa-tirajana|"
@@ -936,5 +936,19 @@
     "status": "new",
     "added_at": "2026-09-18",
     "fingerprint": "adosado-antonio-calle-carrizal-ingenio-morales-rodriguez|"
+  },
+  {
+    "id": "idealista-4e896494",
+    "title": "Chalet pareado en Isa, 77, Bañaderos-El Puertillo-San Andrés, Arucas",
+    "price": 420000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Isa, 77, Bañaderos-El Puertillo-San Andrés, Arucas",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112501394/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/31/dc/f0/1473012120.jpg",
+    "status": "new",
+    "added_at": "2026-09-19",
+    "fingerprint": "77-andres-arucas-banaderos-isa-pareado-puertillo-san|"
   }
 ]
