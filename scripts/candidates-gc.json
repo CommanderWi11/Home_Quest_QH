@@ -950,5 +950,33 @@
     "status": "new",
     "added_at": "2026-09-19",
     "fingerprint": "77-andres-arucas-banaderos-isa-pareado-puertillo-san|"
+  },
+  {
+    "id": "idealista-b1e233cd",
+    "title": "Dúplex en Calle José Gómez Bosch Doctor, 7, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 485000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Calle José Gómez Bosch Doctor, 7, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112543839/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/e9/85/16/1473632458.jpg",
+    "status": "new",
+    "added_at": "2026-09-20",
+    "fingerprint": "bosch-calle-canaria-doctor-gomez-gran-jose-palmas-siete|"
+  },
+  {
+    "id": "idealista-f249d7f3",
+    "title": "Dúplex en Avenida Juan Carlos I, 15, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 450000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Avenida Juan Carlos I, 15, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/111961075/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/96/e1/a1/1454059298.jpg",
+    "status": "new",
+    "added_at": "2026-09-20",
+    "fingerprint": "15-avenida-canaria-carlos-gran-juan-palmas-siete|"
   }
 ]

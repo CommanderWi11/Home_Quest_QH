@@ -516,5 +516,19 @@
     "status": "new",
     "added_at": "2026-09-16",
     "fingerprint": "alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
+  },
+  {
+    "id": "idealista-a9774e98",
+    "title": "Piso en Avenida Pintor Felo Monzón, 27, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 395000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Avenida Pintor Felo Monzón, 27, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112601524/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/56/3c/95/1475503588.jpg",
+    "status": "new",
+    "added_at": "2026-09-20",
+    "fingerprint": "27-avenida-canaria-felo-gran-monzon-palmas-pintor-siete|"
   }
 ]
