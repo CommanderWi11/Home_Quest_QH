@@ -530,5 +530,47 @@
     "status": "new",
     "added_at": "2026-09-20",
     "fingerprint": "27-avenida-canaria-felo-gran-monzon-palmas-pintor-siete|"
+  },
+  {
+    "id": "idealista-5bc4fd16",
+    "title": "Piso en Calle los Almendros s/n, Tamaraceite, Las Palmas de Gran Canaria",
+    "price": 293000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle los Almendros s/n, Tamaraceite, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112613163/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/3d/a1/3a/1449932896.jpg",
+    "status": "new",
+    "added_at": "2026-09-22",
+    "fingerprint": "almendros-calle-canaria-gran-palmas-tamaraceite|"
+  },
+  {
+    "id": "idealista-8d7d2cbd",
+    "title": "Piso en Calle los Almendros s/n, Tamaraceite, Las Palmas de Gran Canaria",
+    "price": 294000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle los Almendros s/n, Tamaraceite, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112613160/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/3d/a1/3a/1449932896.jpg",
+    "status": "new",
+    "added_at": "2026-09-22",
+    "fingerprint": "almendros-calle-canaria-gran-palmas-tamaraceite|"
+  },
+  {
+    "id": "idealista-1d2e43b9",
+    "title": "Ático en Calle Concejal García Feo, 8, La Minilla, Las Palmas de Gran Canaria",
+    "price": 439000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Concejal García Feo, 8, La Minilla, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112603439/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/b2/71/38/1475587764.jpg",
+    "status": "new",
+    "added_at": "2026-09-22",
+    "fingerprint": "calle-canaria-concejal-feo-garcia-gran-minilla-palmas|"
   }
 ]
