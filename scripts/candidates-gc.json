@@ -978,5 +978,47 @@
     "status": "new",
     "added_at": "2026-09-20",
     "fingerprint": "15-avenida-canaria-carlos-gran-juan-palmas-siete|"
+  },
+  {
+    "id": "idealista-757488f1",
+    "title": "Chalet adosado en Tulipan, La Garita - Marpequeña, Telde",
+    "price": 299900,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Tulipan, La Garita - Marpequeña, Telde",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112628458/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ee/11/75/1476448450.jpg",
+    "status": "new",
+    "added_at": "2026-09-23",
+    "fingerprint": "adosado-garita-marpequena-telde-tulipan|"
+  },
+  {
+    "id": "idealista-4944aaf4",
+    "title": "Estudio en Calle el Escorial, Playa del Inglés, San Bartolomé de Tirajana",
+    "price": 229000,
+    "bedrooms": null,
+    "year": null,
+    "location": "Calle el Escorial, Playa del Inglés, San Bartolomé de Tirajana",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112159441/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/52/a5/94/1460663778.jpg",
+    "status": "new",
+    "added_at": "2026-09-23",
+    "fingerprint": "bartolome-calle-escorial-estudio-ingles-playa-san-tirajana|"
+  },
+  {
+    "id": "idealista-b30ed8bb",
+    "title": "Casa o chalet independiente en Santa Catalina De Siena, Casco Urbano, Santa Brigida",
+    "price": 499000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Santa Catalina De Siena, Casco Urbano, Santa Brigida",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112610708/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/a0/b4/19/1475846280.jpg",
+    "status": "new",
+    "added_at": "2026-09-23",
+    "fingerprint": "brigida-casco-catalina-independiente-santa-siena-urbano|"
   }
 ]
