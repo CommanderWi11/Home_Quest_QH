@@ -778,7 +778,7 @@
     "location": "Calle el Pilón, San Lorenzo, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/110288887/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/85/2b/09/1400857604.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/49/01/88/1458043874.jpg",
     "status": "new",
     "added_at": "2026-08-28",
     "fingerprint": "calle-canaria-gran-independiente-lorenzo-palmas-pilon-san|"
@@ -1020,5 +1020,19 @@
     "status": "new",
     "added_at": "2026-09-23",
     "fingerprint": "brigida-casco-catalina-independiente-santa-siena-urbano|"
+  },
+  {
+    "id": "idealista-703d1fb6",
+    "title": "Chalet pareado en Calle de Tabaiba, 5, Mogán interior, Mogán",
+    "price": 390000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle de Tabaiba, 5, Mogán interior, Mogán",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112636817/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/21/e9/26/1476755449.jpg",
+    "status": "new",
+    "added_at": "2026-09-24",
+    "fingerprint": "calle-interior-mogan-pareado-tabaiba|"
   }
 ]
