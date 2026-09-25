@@ -666,7 +666,7 @@
     "location": "., Casco Urbano, Santa Brigida",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112189449/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/28/2b/8d/1461636844.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/1e/78/b0/1461636846.jpg",
     "status": "new",
     "added_at": "2026-08-28",
     "fingerprint": "adosado-brigida-casco-santa-urbano|"
@@ -1034,5 +1034,47 @@
     "status": "new",
     "added_at": "2026-09-24",
     "fingerprint": "calle-interior-mogan-pareado-tabaiba|"
+  },
+  {
+    "id": "idealista-880d63be",
+    "title": "Piso en Avenida Juan Carlos I, 21, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 484610,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Avenida Juan Carlos I, 21, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112650243/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/4e/df/6a/1477254706.jpg",
+    "status": "new",
+    "added_at": "2026-09-25",
+    "fingerprint": "21-avenida-canaria-carlos-gran-juan-palmas-siete|"
+  },
+  {
+    "id": "idealista-8987a1c9",
+    "title": "Chalet pareado en Calle Gardenia, 40, La Garita - Marpequeña, Telde",
+    "price": 410000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle Gardenia, 40, La Garita - Marpequeña, Telde",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112626743/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/79/6c/8e/1476409476.jpg",
+    "status": "new",
+    "added_at": "2026-09-25",
+    "fingerprint": "40-calle-gardenia-garita-marpequena-pareado-telde|"
+  },
+  {
+    "id": "idealista-3b72dfcf",
+    "title": "Chalet pareado en Calle Abraham González, 14, Gáldar, Gáldar",
+    "price": 119000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle Abraham González, 14, Gáldar, Gáldar",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112646251/",
+    "photo": "",
+    "status": "new",
+    "added_at": "2026-09-25",
+    "fingerprint": "14-abraham-calle-galdar-gonzalez-pareado|"
   }
 ]
