@@ -1076,5 +1076,19 @@
     "status": "new",
     "added_at": "2026-09-25",
     "fingerprint": "14-abraham-calle-galdar-gonzalez-pareado|"
+  },
+  {
+    "id": "idealista-9db4889f",
+    "title": "Casa o chalet independiente en Calle Pérez Galdós, San Juan, Telde",
+    "price": 490000,
+    "bedrooms": 7,
+    "year": null,
+    "location": "Calle Pérez Galdós, San Juan, Telde",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/110701116/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/26/28/f0/1477350306.jpg",
+    "status": "new",
+    "added_at": "2026-09-26",
+    "fingerprint": "calle-galdos-independiente-juan-perez-san-telde|"
   }
 ]
