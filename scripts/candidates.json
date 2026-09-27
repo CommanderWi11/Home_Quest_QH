@@ -78,7 +78,7 @@
     "location": "Avenida Juan Carlos I, Siete Palmas, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112041851/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/9f/7f/c0/1470210769.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/87/2b/3d/1476809984.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "avenida-canaria-carlos-gran-juan-palmas-siete|"
@@ -260,7 +260,7 @@
     "location": "Negrín, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112365096/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/1e/c3/d0/1467806366.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ce/80/2d/1467806401.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "canaria-gran-negrin-palmas|"
@@ -316,7 +316,7 @@
     "location": "Calle Virgen del Pilar, Escaleritas - La Feria, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/111809307/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/24/7e/00/1469888114.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d3/1f/dd/1477712783.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "calle-canaria-escaleritas-feria-gran-palmas-pilar-virgen|"
@@ -572,5 +572,33 @@
     "status": "new",
     "added_at": "2026-09-22",
     "fingerprint": "calle-canaria-concejal-feo-garcia-gran-minilla-palmas|"
+  },
+  {
+    "id": "idealista-5c9a8d02",
+    "title": "Chalet adosado en Calle Pedro García Arocena, Tamaraceite, Las Palmas de Gran Canaria",
+    "price": 319990,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Pedro García Arocena, Tamaraceite, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112653882/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/fe/d0/c4/1477399695.jpg",
+    "status": "new",
+    "added_at": "2026-09-27",
+    "fingerprint": "adosado-arocena-calle-canaria-garcia-gran-palmas-pedro-tamaraceite|"
+  },
+  {
+    "id": "idealista-48254d51",
+    "title": "Piso en Avenida César Manrique, 2, Tamaraceite, Las Palmas de Gran Canaria",
+    "price": 285000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Avenida César Manrique, 2, Tamaraceite, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/109522718/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ca/41/96/1471134410.jpg",
+    "status": "new",
+    "added_at": "2026-09-27",
+    "fingerprint": "avenida-canaria-cesar-gran-manrique-palmas-tamaraceite|"
   }
 ]
