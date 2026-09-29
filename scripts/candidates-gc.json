@@ -1090,5 +1090,47 @@
     "status": "new",
     "added_at": "2026-09-26",
     "fingerprint": "calle-galdos-independiente-juan-perez-san-telde|"
+  },
+  {
+    "id": "idealista-6e9cee62",
+    "title": "Casa o chalet independiente en Calle Armiche, 31, Callejón del Castillo - El Calero - Las Huesas, Telde",
+    "price": 490000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle Armiche, 31, Callejón del Castillo - El Calero - Las Huesas, Telde",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/109795048/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/26/c4/e7/1385821683.jpg",
+    "status": "new",
+    "added_at": "2026-09-29",
+    "fingerprint": "31-armiche-calero-calle-callejon-castillo-huesas-independiente-telde|"
+  },
+  {
+    "id": "idealista-f5a68ffb",
+    "title": "Casa o chalet en Vecindario-Paredilla-Sardina, Santa Lucía de Tirajana",
+    "price": 330000,
+    "bedrooms": 7,
+    "year": null,
+    "location": "Vecindario-Paredilla-Sardina, Santa Lucía de Tirajana",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112671428/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/37/d0/2d/1478123119.jpg",
+    "status": "new",
+    "added_at": "2026-09-29",
+    "fingerprint": "lucia-paredilla-santa-sardina-tirajana-vecindario|"
+  },
+  {
+    "id": "idealista-ce372b7a",
+    "title": "Chalet pareado en Calle de Tabaiba, 5, Mogán interior, Mogán",
+    "price": 390000,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle de Tabaiba, 5, Mogán interior, Mogán",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112676139/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/78/ff/e3/1478277992.jpg",
+    "status": "new",
+    "added_at": "2026-09-29",
+    "fingerprint": "calle-interior-mogan-pareado-tabaiba|"
   }
 ]
