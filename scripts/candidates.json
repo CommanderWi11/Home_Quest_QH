@@ -156,13 +156,13 @@
   {
     "id": "idealista-7d235ca6",
     "title": "Piso en Calle Fernando Guanarteme, Santa Catalina - Canteras, Las Palmas de Gran Canaria",
-    "price": 398000,
+    "price": 340000,
     "bedrooms": 3,
     "year": null,
     "location": "Calle Fernando Guanarteme, Santa Catalina - Canteras, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/111412329/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/06/13/13/1437877665.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ee/80/af/1476941290.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "calle-canaria-canteras-catalina-fernando-gran-guanarteme-palmas-santa|"
@@ -316,7 +316,7 @@
     "location": "Calle Virgen del Pilar, Escaleritas - La Feria, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/111809307/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d3/1f/dd/1477712783.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ba/08/f3/1477946617.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "calle-canaria-escaleritas-feria-gran-palmas-pilar-virgen|"
@@ -600,5 +600,47 @@
     "status": "new",
     "added_at": "2026-09-27",
     "fingerprint": "avenida-canaria-cesar-gran-manrique-palmas-tamaraceite|"
+  },
+  {
+    "id": "idealista-175d5a97",
+    "title": "Piso en Avenida Pintor Felo Monzón, 27, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 395000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Avenida Pintor Felo Monzón, 27, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112670379/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/1e/36/64/1478090822.jpg",
+    "status": "new",
+    "added_at": "2026-09-30",
+    "fingerprint": "27-avenida-canaria-felo-gran-monzon-palmas-pintor-siete|"
+  },
+  {
+    "id": "idealista-878f75a7",
+    "title": "Piso en Avenida Juan Carlos I, 1, Negrín, Las Palmas de Gran Canaria",
+    "price": 370000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Avenida Juan Carlos I, 1, Negrín, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/111551147/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/a3/1a/35/1440226222.jpg",
+    "status": "new",
+    "added_at": "2026-09-30",
+    "fingerprint": "avenida-canaria-carlos-gran-juan-negrin-palmas|"
+  },
+  {
+    "id": "idealista-d685346e",
+    "title": "Dúplex en Calle Concejal García Feo, 8, La Minilla, Las Palmas de Gran Canaria",
+    "price": 395000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Concejal García Feo, 8, La Minilla, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/110816997/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/f9/3a/91/1417788663.jpg",
+    "status": "new",
+    "added_at": "2026-09-30",
+    "fingerprint": "calle-canaria-concejal-feo-garcia-gran-minilla-palmas|"
   }
 ]
