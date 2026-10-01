@@ -50,7 +50,7 @@
     "location": "Calle Llanos de Ucanca, Las Mesas - El Toscón, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112367496/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/85/36/c2/1467544185.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/f0/af/2b/1467544188.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "calle-canaria-gran-llanos-mesas-palmas-pareado-toscon-ucanca|"
@@ -642,5 +642,19 @@
     "status": "new",
     "added_at": "2026-09-30",
     "fingerprint": "calle-canaria-concejal-feo-garcia-gran-minilla-palmas|"
+  },
+  {
+    "id": "idealista-c8cd938b",
+    "title": "Piso en Calle Virgen del Pilar, 11, Escaleritas - La Feria, Las Palmas de Gran Canaria",
+    "price": 359500,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Virgen del Pilar, 11, Escaleritas - La Feria, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/103480823/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/2f/ee/9a/1190846283.jpg",
+    "status": "new",
+    "added_at": "2026-10-01",
+    "fingerprint": "11-calle-canaria-escaleritas-feria-gran-palmas-pilar-virgen|"
   }
 ]

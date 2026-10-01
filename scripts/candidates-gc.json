@@ -1132,5 +1132,19 @@
     "status": "new",
     "added_at": "2026-09-29",
     "fingerprint": "calle-interior-mogan-pareado-tabaiba|"
+  },
+  {
+    "id": "idealista-eb653ec7",
+    "title": "Casa o chalet independiente en Calle Taganana, 23, Vecindario-Los Llanos, Santa Lucía de Tirajana",
+    "price": 434900,
+    "bedrooms": 5,
+    "year": null,
+    "location": "Calle Taganana, 23, Vecindario-Los Llanos, Santa Lucía de Tirajana",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112695599/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/65/a5/f0/1478961868.jpg",
+    "status": "new",
+    "added_at": "2026-10-01",
+    "fingerprint": "23-calle-independiente-llanos-lucia-santa-taganana-tirajana-vecindario|"
   }
 ]
