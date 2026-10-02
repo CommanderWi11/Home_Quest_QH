@@ -656,5 +656,47 @@
     "status": "new",
     "added_at": "2026-10-01",
     "fingerprint": "11-calle-canaria-escaleritas-feria-gran-palmas-pilar-virgen|"
+  },
+  {
+    "id": "idealista-a98189e7",
+    "title": "Piso en Avenida Pintor Felo Monzón, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 321000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Avenida Pintor Felo Monzón, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112698501/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/e7/cd/5d/1479050969.jpg",
+    "status": "new",
+    "added_at": "2026-10-02",
+    "fingerprint": "avenida-canaria-felo-gran-monzon-palmas-pintor-siete|"
+  },
+  {
+    "id": "idealista-fd27a57c",
+    "title": "Piso en Calle Cuatro Cañones, 1, Schamann - Rehoyas, Las Palmas de Gran Canaria",
+    "price": 285000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Cuatro Cañones, 1, Schamann - Rehoyas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112699662/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/64/a5/42/1468896306.jpg",
+    "status": "new",
+    "added_at": "2026-10-02",
+    "fingerprint": "calle-canaria-canones-cuatro-gran-palmas-rehoyas-schamann|"
+  },
+  {
+    "id": "idealista-83621c62",
+    "title": "Piso en Calle Profesor Reina, 1, Escaleritas - La Feria, Las Palmas de Gran Canaria",
+    "price": 225000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Profesor Reina, 1, Escaleritas - La Feria, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/100854591/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ff/f9/77/1245004619.jpg",
+    "status": "new",
+    "added_at": "2026-10-02",
+    "fingerprint": "calle-canaria-escaleritas-feria-gran-palmas-profesor-reina|"
   }
 ]
