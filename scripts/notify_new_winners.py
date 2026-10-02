@@ -9,41 +9,38 @@ Two halves:
   * weekly-search.sh runs this script once, after Stage E (cross-track dedup)
     and before Stage D (push). It reads both markers, keeps only the houses
     still on the final boards, and sends ONE email with each house's front
-    photo (inline, fetched now; falls back to a linked image) and a direct
-    link to the ad.
+    photo and a direct link to the ad.
 
 Idempotent per calendar day (.state/notified-<date>.json), stale markers from
 another day are ignored, and nothing here may ever block the publish: every
 failure path logs and exits 0.
 
-Config (the repo is public, so neither lives in code):
-  * mailbox (sender == recipient): GMAIL_MAILBOX=... in the gitignored .env
-  * Gmail App Password: read at send time from the automation keychain —
-    `cred get home-quest-qh GMAIL_APP_PASSWORD` — never logged.
+Sending goes through the already-authorized personal Gmail MCP server
+(`gmail-personal` in ~/.claude/settings.json, the family's OAuth): this script
+spawns that exact node process and speaks MCP JSON-RPC to it over stdio —
+no `claude -p`, no LLM call, no extra credential. Config, both local-only
+because the repo is public, in the gitignored .env:
+  GMAIL_MAILBOX=...       sender == recipient
+  GMAIL_MCP_USER_ID=...   the server's multi-user session id for that mailbox
 Without either, the notifier says so and skips.
 """
 import json
 import subprocess
 import sys
+import threading
 from datetime import date
-from email.message import EmailMessage
-from email.utils import make_msgid
 from html import escape
 from pathlib import Path
 from typing import Callable, Optional
-
-import requests
 
 import tracks
 
 STATE_DIR = Path(__file__).parent.parent / ".state"
 ENV_FILE = Path(__file__).parent.parent / ".env"
-CRED = Path.home() / ".config" / "ai-coworking" / "cred"
-CRED_SERVICE, CRED_ACCOUNT = "home-quest-qh", "GMAIL_APP_PASSWORD"
-SMTP_HOST, SMTP_PORT = "smtp.gmail.com", 465
+SETTINGS_FILE = Path.home() / ".claude" / "settings.json"
+MCP_SERVER = "gmail-personal"
+MCP_TIMEOUT = 90  # seconds for the whole initialize -> send exchange
 DASHBOARD = "https://commanderwi11.github.io/Home_Quest_QH/"
-HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
 
 
 # ------------------------------------------------------------------ markers
@@ -95,35 +92,23 @@ def _price(p) -> str:
         return "precio no indicado"
 
 
-def build_message(houses: list, photos: dict, today: str, mailbox: str) -> EmailMessage:
-    """One email for all of today's first-time winners. `photos` maps id ->
-    image bytes already fetched (inline, cid:); a missing entry falls back to
-    an <img> pointing at the portal's own photo URL."""
+def build_message(houses: list, today: str, mailbox: str) -> dict:
+    """One email for all of today's first-time winners, as the dict the Gmail
+    MCP `gmail_send_email` tool takes. The photo is the portal's own image URL
+    (Gmail fetches it through its proxy at view time)."""
     n = len(houses)
-    msg = EmailMessage()
-    msg["Subject"] = f"Home Quest: {n} casa{'s' if n != 1 else ''} nueva{'s' if n != 1 else ''} ({today})"
-    msg["From"] = mailbox
-    msg["To"] = mailbox
-
-    lines = [f"Home Quest {today}: {n} casa(s) nueva(s) en el Top 5", ""]
+    plural = "s" if n != 1 else ""
+    lines = [f"Home Quest {today}: {n} casa{plural} nueva{plural} en el Top 5", ""]
     blocks = []
-    inline = []  # (cid, bytes, subtype)
     for h in houses:
         url, title = h.get("url", ""), h.get("title", "")
         meta = " · ".join(x for x in (_price(h.get("price")), h.get("location", ""),
                                       h.get("track_label", "")) if x)
         lines += [title, meta, url, ""]
-
-        data = photos.get(h.get("id"))
-        if data:
-            cid = make_msgid(domain="home-quest-qh")
-            inline.append((cid, data, _image_subtype(data)))
-            src = f"cid:{cid[1:-1]}"
-        else:
-            src = h.get("photo") or ""
-        img = (f'<a href="{escape(url)}"><img src="{escape(src)}" alt="" '
+        photo = h.get("photo") or ""
+        img = (f'<a href="{escape(url)}"><img src="{escape(photo)}" alt="" '
                f'style="width:100%;max-width:480px;border-radius:8px;display:block"></a>'
-               if src else "")
+               if photo.startswith("http") else "")
         blocks.append(
             f'<div style="margin:0 0 28px 0">{img}'
             f'<p style="margin:10px 0 2px 0;font-size:17px;font-weight:600">'
@@ -132,77 +117,120 @@ def build_message(houses: list, photos: dict, today: str, mailbox: str) -> Email
             f'<p style="margin:0"><a href="{escape(url)}">Ver anuncio</a></p></div>')
 
     html = (f'<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:520px">'
-            f'<p style="font-size:14px;color:#555">{n} casa{"s" if n != 1 else ""} nueva'
-            f'{"s" if n != 1 else ""} en el Top 5 de hoy. '
-            f'<a href="{DASHBOARD}">Panel</a></p>{"".join(blocks)}</div>')
-
-    msg.set_content("\n".join(lines))
-    msg.add_alternative(html, subtype="html")
-    for cid, data, subtype in inline:
-        msg.get_payload()[1].add_related(data, maintype="image", subtype=subtype, cid=cid)
-    return msg
-
-
-def _image_subtype(data: bytes) -> str:
-    if data[:8] == b"\x89PNG\r\n\x1a\n":
-        return "png"
-    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
-        return "webp"
-    return "jpeg"
+            f'<p style="font-size:14px;color:#555">{n} casa{plural} nueva{plural} en el Top 5 '
+            f'de hoy. <a href="{DASHBOARD}">Panel</a></p>{"".join(blocks)}</div>')
+    return {
+        "to": [mailbox],
+        "subject": f"Home Quest: {n} casa{plural} nueva{plural} ({today})",
+        "text": "\n".join(lines),
+        "html": html,
+    }
 
 
-# ------------------------------------------------------------------ I/O
+# ------------------------------------------------------------------ config
 
-def fetch_photo(url: str) -> Optional[bytes]:
-    if not (url or "").startswith("http"):
-        return None
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        if r.ok and r.headers.get("content-type", "").startswith("image/") and r.content:
-            return r.content
-    except requests.RequestException:
-        pass
-    return None
-
-
-def load_mailbox(env_file: Optional[Path] = None) -> Optional[str]:
-    """GMAIL_MAILBOX from the gitignored .env (KEY=value lines, # comments)."""
+def load_env(env_file: Optional[Path] = None) -> dict:
+    """KEY=value pairs from the gitignored .env (# comments, optional quotes)."""
     env_file = env_file or ENV_FILE
+    out = {}
     if not env_file.exists():
-        return None
+        return out
     for line in env_file.read_text().splitlines():
         line = line.strip()
-        if line.startswith("GMAIL_MAILBOX="):
-            return line.split("=", 1)[1].strip().strip('"\'') or None
-    return None
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            out[k.strip()] = v.strip().strip('"\'')
+    return out
 
 
-def get_password() -> Optional[str]:
-    if not CRED.exists():
-        return None
+def mcp_server_config(settings_file: Optional[Path] = None) -> Optional[dict]:
+    """The `gmail-personal` launch spec (command/args/env) from Claude's settings."""
+    settings_file = settings_file or SETTINGS_FILE
     try:
-        r = subprocess.run([str(CRED), "get", CRED_SERVICE, CRED_ACCOUNT],
-                           capture_output=True, text=True, timeout=20)
-    except (OSError, subprocess.SubprocessError):
+        return json.loads(settings_file.read_text())["mcpServers"][MCP_SERVER]
+    except (OSError, KeyError, json.JSONDecodeError):
         return None
-    pw = r.stdout.strip()
-    return pw if r.returncode == 0 and pw else None
 
 
-def send(msg: EmailMessage, password: str) -> None:
-    import smtplib
-    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30) as s:
-        s.login(msg["From"], password)
-        s.send_message(msg)
+# ------------------------------------------------------------------ send
+
+class McpError(Exception):
+    pass
+
+
+def _rpc_exchange(proc: subprocess.Popen, payload: dict, user_id: str) -> str:
+    def call(obj):
+        proc.stdin.write(json.dumps(obj) + "\n")
+        proc.stdin.flush()
+
+    def reply(id_):
+        while True:
+            line = proc.stdout.readline()
+            if not line:
+                raise McpError("server closed the pipe")
+            try:
+                obj = json.loads(line)
+            except json.JSONDecodeError:
+                continue  # non-protocol chatter on stdout
+            if obj.get("id") == id_:
+                if "error" in obj:
+                    raise McpError(obj["error"].get("message", str(obj["error"])))
+                return obj["result"]
+
+    call({"jsonrpc": "2.0", "id": 1, "method": "initialize",
+          "params": {"protocolVersion": "2024-11-05", "capabilities": {},
+                     "clientInfo": {"name": "home-quest-qh", "version": "1"}}})
+    reply(1)
+    call({"jsonrpc": "2.0", "method": "notifications/initialized"})
+    call({"jsonrpc": "2.0", "id": 2, "method": "tools/call",
+          "params": {"name": "gmail_send_email",
+                     "arguments": dict(payload, userId=user_id)}})
+    result = reply(2)
+    text = " ".join(c.get("text", "") for c in result.get("content", [])
+                    if c.get("type") == "text")
+    if result.get("isError") or text.lstrip().startswith("❌"):
+        raise McpError(text[:300] or "tool reported an error")
+    return text
+
+
+def send(payload: dict, user_id: str, server_cfg: dict, timeout: int = MCP_TIMEOUT) -> str:
+    """Spawn the Gmail MCP server and call gmail_send_email once. Raises on
+    any failure; the whole exchange is bounded by `timeout`."""
+    import os
+    proc = subprocess.Popen(
+        [server_cfg["command"], *server_cfg.get("args", [])],
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+        env={**os.environ, **server_cfg.get("env", {})}, text=True,
+    )
+    box: dict = {}
+
+    def worker():
+        try:
+            box["ok"] = _rpc_exchange(proc, payload, user_id)
+        except Exception as exc:  # noqa: BLE001 — surfaced below
+            box["err"] = exc
+
+    t = threading.Thread(target=worker, daemon=True)
+    t.start()
+    t.join(timeout)
+    try:
+        proc.stdin.close()
+    except OSError:
+        pass
+    proc.kill()
+    if t.is_alive():
+        raise McpError(f"no answer from {MCP_SERVER} within {timeout}s")
+    if "err" in box:
+        raise box["err"]
+    return box["ok"]
 
 
 # ------------------------------------------------------------------ main
 
 def run(state_dir: Path, track_cfg: dict, today: str, *,
-        mailbox: Optional[str] = None,
-        password_getter: Callable[[], Optional[str]] = get_password,
-        sender: Callable[[EmailMessage, str], None] = send,
-        photo_getter: Callable[[str], Optional[bytes]] = fetch_photo) -> int:
+        env: Optional[dict] = None,
+        server_cfg: Optional[dict] = None,
+        sender: Callable[[dict, str, dict], str] = send) -> int:
     notified = state_dir / f"notified-{today}.json"
     if notified.exists():
         print("[notify] already emailed today; skipping.")
@@ -215,21 +243,21 @@ def run(state_dir: Path, track_cfg: dict, today: str, *,
         clear_markers(state_dir, track_cfg)
         return 0
 
-    mailbox = mailbox or load_mailbox()
-    if not mailbox:
-        print(f"[notify] GMAIL_MAILBOX missing from {ENV_FILE.name} — "
+    env = load_env() if env is None else env
+    mailbox, user_id = env.get("GMAIL_MAILBOX"), env.get("GMAIL_MCP_USER_ID")
+    if not (mailbox and user_id):
+        print(f"[notify] GMAIL_MAILBOX / GMAIL_MCP_USER_ID missing from {ENV_FILE.name} — "
               f"{len(houses)} new house(s) NOT emailed.", file=sys.stderr)
         return 0
-    password = password_getter()
-    if not password:
-        print(f"[notify] no credential ({CRED_SERVICE}/{CRED_ACCOUNT} in the automation "
-              f"keychain) — {len(houses)} new house(s) NOT emailed.", file=sys.stderr)
+    server_cfg = server_cfg or mcp_server_config()
+    if not server_cfg:
+        print(f"[notify] no `{MCP_SERVER}` server in {SETTINGS_FILE} — "
+              f"{len(houses)} new house(s) NOT emailed.", file=sys.stderr)
         return 0
 
-    photos = {h["id"]: p for h in houses if (p := photo_getter(h.get("photo", "")))}
-    msg = build_message(houses, photos, today, mailbox)
+    payload = build_message(houses, today, mailbox)
     try:
-        sender(msg, password)
+        sender(payload, user_id, server_cfg)
     except Exception as exc:  # noqa: BLE001 — never block the publish
         print(f"[notify] email failed ({type(exc).__name__}: {exc}); will not retry.",
               file=sys.stderr)
