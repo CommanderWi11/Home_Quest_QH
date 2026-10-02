@@ -294,6 +294,15 @@ if [ "${PUBLISHED[0]}" -eq 1 ] && [ "${PUBLISHED[1]}" -eq 1 ]; then
   "$PY" scripts/dedupe_tracks.py || echo "WARNING: dedupe_tracks.py failed — both boards published as-is, may contain a cross-track duplicate."
 fi
 
+# --------------------------------------------------------------- Stage F: new-house email
+# One email to Luis for every house winning a Top 5 for the first time ever
+# (markers written by Stage C, filtered against the post-Stage-E boards).
+# Always exits 0 — a dead SMTP or missing App Password must never block Stage D.
+if [ "${PUBLISHED[0]}" -eq 1 ] || [ "${PUBLISHED[1]}" -eq 1 ]; then
+  echo "--- Stage F: new-house email"
+  "$PY" scripts/notify_new_winners.py || echo "WARNING: notify_new_winners.py crashed — publish continues."
+fi
+
 # --------------------------------------------------------------- Stage D: publish
 # BUG FIXED 2026-08-28 (found on the first real two-track run): plain `git add
 # fileA fileB missingFile` aborts staging ALL of them, not just the missing

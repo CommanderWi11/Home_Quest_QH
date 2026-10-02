@@ -23,6 +23,7 @@ from pathlib import Path
 import archive
 import board
 import harvest
+import notify_new_winners
 import tracks
 from harvest import (
     fetch_og_image, load_blocklist, load_candidates, load_listings,
@@ -230,7 +231,15 @@ def main() -> int:
     # listings.json, which only ever holds today's Top 5 + Favorites). The
     # dashboard dedups this against Top 5/Favoritos/older dates client-side
     # (see docs/history-dedup.js); nothing here needs to be deduped or pruned.
-    archive.append_snapshot(track["archive_file"], str(date.today()), winners)
+    today = str(date.today())
+    new_ids = archive.append_snapshot(track["archive_file"], today, winners)
+
+    # First-time-ever winners -> marker for notify_new_winners.py, which runs
+    # after Stage E (so a cross-track dedup drop never gets announced).
+    notify_new_winners.write_marker(
+        notify_new_winners.STATE_DIR, args.track, today,
+        [w for w in winners if w["id"] in new_ids],
+    )
 
     favorites = sum(1 for l in updated if not l.get("rank"))
     print(f"Board updated:")

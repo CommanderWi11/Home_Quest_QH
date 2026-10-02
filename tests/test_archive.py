@@ -53,3 +53,20 @@ def test_load_snapshots_returns_empty_list_for_corrupt_json(tmp_path):
     f = tmp_path / "archive.json"
     f.write_text("not valid json{{{")
     assert archive.load_snapshots(f) == []
+
+
+def test_append_snapshot_returns_ids_never_archived_before(tmp_path):
+    """The "new house" email (notify_new_winners.py) keys off this return value:
+    an id is new only if no EARLIER day's snapshot mentions it."""
+    f = tmp_path / "archive.json"
+    assert archive.append_snapshot(f, "2026-08-27", [{"id": "a"}, {"id": "b"}]) == {"a", "b"}
+    assert archive.append_snapshot(f, "2026-08-28", [{"id": "b"}, {"id": "c"}]) == {"c"}
+
+
+def test_append_snapshot_same_day_rerun_reports_the_same_new_ids(tmp_path):
+    """A forced same-day re-run replaces today's snapshot, so today's own
+    entries must not count as 'seen before' on the second pass."""
+    f = tmp_path / "archive.json"
+    archive.append_snapshot(f, "2026-08-27", [{"id": "a"}])
+    assert archive.append_snapshot(f, "2026-08-28", [{"id": "a"}, {"id": "c"}]) == {"c"}
+    assert archive.append_snapshot(f, "2026-08-28", [{"id": "a"}, {"id": "c"}]) == {"c"}

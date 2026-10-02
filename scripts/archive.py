@@ -23,14 +23,21 @@ def load_snapshots(archive_file: Path) -> list:
         return []
 
 
-def append_snapshot(archive_file: Path, date: str, entries: list) -> None:
+def append_snapshot(archive_file: Path, date: str, entries: list) -> set[str]:
     """Record `entries` (today's validated winners) as `date`'s snapshot.
 
     Idempotent per calendar day: replaces any existing snapshot for the same
     date instead of duplicating it, so a forced same-day re-run (delete the
     .state marker, re-kick the job) doesn't pile up two entries for one day.
     Newest-first, matching history.json's existing convention.
+
+    Returns the ids in `entries` that no OTHER day's snapshot mentions — i.e.
+    houses winning for the first time ever. notify_new_winners.py emails the
+    family about exactly these. Today's own (replaced) snapshot is excluded
+    from "seen before" so a same-day re-run reports the same set.
     """
     snapshots = [s for s in load_snapshots(archive_file) if s.get("date") != date]
+    seen = {e.get("id") for s in snapshots for e in s.get("entries", [])}
     snapshots.insert(0, {"date": date, "entries": entries})
     archive_file.write_text(json.dumps(snapshots, ensure_ascii=False, indent=2))
+    return {e["id"] for e in entries if e.get("id") and e["id"] not in seen}
