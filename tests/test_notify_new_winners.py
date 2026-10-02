@@ -120,7 +120,7 @@ def test_run_without_env_config_skips_but_does_not_fail(tmp_path):
 
 
 def test_run_without_server_config_skips_but_does_not_fail(tmp_path, monkeypatch):
-    monkeypatch.setattr(nn, "SETTINGS_FILE", tmp_path / "no-settings.json")
+    monkeypatch.setattr(nn, "SETTINGS_FILES", (tmp_path / "no-settings.json",))
     nn.write_marker(tmp_path, "gc", "2026-10-02", [HOUSE])
     sent = []
     assert _run(tmp_path, _tracks(tmp_path), sent, server_cfg=None) == 0
@@ -155,9 +155,21 @@ def test_load_env_parses_the_env_file(tmp_path):
 def test_mcp_server_config_reads_claude_settings(tmp_path):
     s = tmp_path / "settings.json"
     s.write_text(json.dumps({"mcpServers": {"gmail-personal": {"command": "node", "args": ["x.js"]}}}))
-    assert nn.mcp_server_config(s) == {"command": "node", "args": ["x.js"]}
+    assert nn.mcp_server_config((tmp_path / "missing.json", s)) == {"command": "node", "args": ["x.js"]}
     s.write_text(json.dumps({"mcpServers": {}}))
-    assert nn.mcp_server_config(s) is None
+    assert nn.mcp_server_config((s,)) is None
+
+
+def test_run_without_user_id_still_sends_single_user(tmp_path):
+    nn.write_marker(tmp_path, "gc", "2026-10-02", [HOUSE])
+    sent = []
+    assert _run(tmp_path, _tracks(tmp_path), sent, env={"GMAIL_MAILBOX": MAILBOX}) == 0
+    assert len(sent) == 1 and sent[0][1] is None
+
+
+def test_send_omits_user_id_when_not_configured():
+    cfg = {"command": sys.executable, "args": [FAKE, "ok", "single"]}
+    assert "sent" in nn.send({"to": ["a@b"], "subject": "s"}, None, cfg, timeout=20)
 
 
 # ---------------------------------------------------------------- MCP exchange

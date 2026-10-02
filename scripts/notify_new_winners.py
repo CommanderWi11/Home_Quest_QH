@@ -16,13 +16,13 @@ another day are ignored, and nothing here may ever block the publish: every
 failure path logs and exits 0.
 
 Sending goes through the already-authorized personal Gmail MCP server
-(`gmail-personal` in ~/.claude/settings.json, the family's OAuth): this script
-spawns that exact node process and speaks MCP JSON-RPC to it over stdio —
-no `claude -p`, no LLM call, no extra credential. Config, both local-only
-because the repo is public, in the gitignored .env:
-  GMAIL_MAILBOX=...       sender == recipient
-  GMAIL_MCP_USER_ID=...   the server's multi-user session id for that mailbox
-Without either, the notifier says so and skips.
+(`gmail-personal` in ~/.claude.json, the family's OAuth): this script spawns
+that exact process and speaks MCP JSON-RPC to it over stdio — no `claude -p`,
+no LLM call, no extra credential. Config, local-only because the repo is
+public, in the gitignored .env:
+  GMAIL_MAILBOX=...       sender == recipient (required)
+  GMAIL_MCP_USER_ID=...   only if the server runs --multi-user (optional)
+Without the mailbox or the server entry, the notifier says so and skips.
 """
 import json
 import subprocess
@@ -37,7 +37,9 @@ import tracks
 
 STATE_DIR = Path(__file__).parent.parent / ".state"
 ENV_FILE = Path(__file__).parent.parent / ".env"
-SETTINGS_FILE = Path.home() / ".claude" / "settings.json"
+# User-scope MCP servers live in ~/.claude.json; ~/.claude/settings.json is the
+# older location, kept as a fallback.
+SETTINGS_FILES = (Path.home() / ".claude.json", Path.home() / ".claude" / "settings.json")
 MCP_SERVER = "gmail-personal"
 MCP_TIMEOUT = 90  # seconds for the whole initialize -> send exchange
 DASHBOARD = "https://commanderwi11.github.io/Home_Quest_QH/"
@@ -143,13 +145,15 @@ def load_env(env_file: Optional[Path] = None) -> dict:
     return out
 
 
-def mcp_server_config(settings_file: Optional[Path] = None) -> Optional[dict]:
-    """The `gmail-personal` launch spec (command/args/env) from Claude's settings."""
-    settings_file = settings_file or SETTINGS_FILE
-    try:
-        return json.loads(settings_file.read_text())["mcpServers"][MCP_SERVER]
-    except (OSError, KeyError, json.JSONDecodeError):
-        return None
+def mcp_server_config(settings_files: Optional[tuple] = None) -> Optional[dict]:
+    """The `gmail-personal` launch spec (command/args/env) from Claude's
+    settings, first file that defines it wins."""
+    for settings_file in settings_files or SETTINGS_FILES:
+        try:
+            return json.loads(settings_file.read_text())["mcpServers"][MCP_SERVER]
+        except (OSError, KeyError, json.JSONDecodeError):
+            continue
+    return None
 
 
 # ------------------------------------------------------------------ send
@@ -158,7 +162,7 @@ class McpError(Exception):
     pass
 
 
-def _rpc_exchange(proc: subprocess.Popen, payload: dict, user_id: str) -> str:
+def _rpc_exchange(proc: subprocess.Popen, payload: dict, user_id: Optional[str]) -> str:
     def call(obj):
         proc.stdin.write(json.dumps(obj) + "\n")
         proc.stdin.flush()
@@ -184,7 +188,7 @@ def _rpc_exchange(proc: subprocess.Popen, payload: dict, user_id: str) -> str:
     call({"jsonrpc": "2.0", "method": "notifications/initialized"})
     call({"jsonrpc": "2.0", "id": 2, "method": "tools/call",
           "params": {"name": "gmail_send_email",
-                     "arguments": dict(payload, userId=user_id)}})
+                     "arguments": dict(payload, userId=user_id) if user_id else payload}})
     result = reply(2)
     text = " ".join(c.get("text", "") for c in result.get("content", [])
                     if c.get("type") == "text")
@@ -193,7 +197,8 @@ def _rpc_exchange(proc: subprocess.Popen, payload: dict, user_id: str) -> str:
     return text
 
 
-def send(payload: dict, user_id: str, server_cfg: dict, timeout: int = MCP_TIMEOUT) -> str:
+def send(payload: dict, user_id: Optional[str], server_cfg: dict,
+         timeout: int = MCP_TIMEOUT) -> str:
     """Spawn the Gmail MCP server and call gmail_send_email once. Raises on
     any failure; the whole exchange is bounded by `timeout`."""
     import os
@@ -244,14 +249,15 @@ def run(state_dir: Path, track_cfg: dict, today: str, *,
         return 0
 
     env = load_env() if env is None else env
-    mailbox, user_id = env.get("GMAIL_MAILBOX"), env.get("GMAIL_MCP_USER_ID")
-    if not (mailbox and user_id):
-        print(f"[notify] GMAIL_MAILBOX / GMAIL_MCP_USER_ID missing from {ENV_FILE.name} — "
+    mailbox = env.get("GMAIL_MAILBOX")
+    user_id = env.get("GMAIL_MCP_USER_ID") or None  # only for a --multi-user server
+    if not mailbox:
+        print(f"[notify] GMAIL_MAILBOX missing from {ENV_FILE.name} — "
               f"{len(houses)} new house(s) NOT emailed.", file=sys.stderr)
         return 0
     server_cfg = server_cfg or mcp_server_config()
     if not server_cfg:
-        print(f"[notify] no `{MCP_SERVER}` server in {SETTINGS_FILE} — "
+        print(f"[notify] no `{MCP_SERVER}` server in {' / '.join(map(str, SETTINGS_FILES))} — "
               f"{len(houses)} new house(s) NOT emailed.", file=sys.stderr)
         return 0
 

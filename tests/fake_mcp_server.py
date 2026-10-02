@@ -19,7 +19,10 @@ for line in sys.stdin:
                "serverInfo": {"name": "fake", "version": "0"}}
     elif req["method"] == "tools/call":
         args = req["params"]["arguments"]
-        assert args.get("userId") == "user_1", args
+        if len(sys.argv) > 2 and sys.argv[2] == "single":
+            assert "userId" not in args, args
+        else:
+            assert args.get("userId") == "user_1", args
         if mode == "hang":
             time.sleep(60)
             continue
