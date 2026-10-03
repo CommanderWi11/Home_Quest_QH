@@ -36,7 +36,7 @@
     "location": "Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/111806277/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/f2/48/1a/1468477091.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/6b/a5/2b/1479679312.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "adosado-canaria-gran-hoyos-marzagan-montaneta-palmas|"
@@ -120,7 +120,7 @@
     "location": "Calle Doctor Alfonso Chiscano Díaz, 12, Negrín, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112357930/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/12/0a/66/1474400628.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/d4/54/83/1474400610.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "12-alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
@@ -274,7 +274,7 @@
     "location": "Negrín, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/110325851/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/1d/8c/eb/1371383729.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/35/51/06/1479792028.jpg",
     "status": "new",
     "added_at": "2026-08-26",
     "fingerprint": "canaria-gran-negrin-palmas|"
@@ -470,7 +470,7 @@
     "location": "Calle Doctor Alfonso Chiscano Díaz, 12, Negrín, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/112451485/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/bf/fe/1b/1473602660.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/e7/40/01/1473602661.jpg",
     "status": "new",
     "added_at": "2026-09-04",
     "fingerprint": "12-alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
@@ -694,9 +694,37 @@
     "location": "Calle Profesor Reina, 1, Escaleritas - La Feria, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/100854591/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ff/f9/77/1245004619.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/b0/91/88/1245004467.jpg",
     "status": "new",
     "added_at": "2026-10-02",
     "fingerprint": "calle-canaria-escaleritas-feria-gran-palmas-profesor-reina|"
+  },
+  {
+    "id": "idealista-de5a1312",
+    "title": "Casa o chalet en Lugar Lomo de Cuesta Ramón, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
+    "price": 145000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Lugar Lomo de Cuesta Ramón, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/111641838/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/08/e9/e9/1443297254.jpg",
+    "status": "new",
+    "added_at": "2026-10-03",
+    "fingerprint": "canaria-cuesta-gran-hoyos-lomo-lugar-marzagan-montaneta-palmas-ramon|"
+  },
+  {
+    "id": "idealista-a0cdbcdb",
+    "title": "Piso en Calle Lomo la Plana, Siete Palmas, Las Palmas de Gran Canaria",
+    "price": 365000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle Lomo la Plana, Siete Palmas, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112560091/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/19/fc/ba/1474045395.jpg",
+    "status": "new",
+    "added_at": "2026-10-03",
+    "fingerprint": "calle-canaria-gran-lomo-palmas-plana-siete|"
   }
 ]

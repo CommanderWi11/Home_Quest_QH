@@ -240,7 +240,7 @@
   {
     "id": "idealista-70f18719",
     "title": "Estudio en Calle los Pinos, San Agustín-Bahía Feliz, San Bartolomé de Tirajana",
-    "price": 176000,
+    "price": 169000,
     "bedrooms": null,
     "year": null,
     "location": "Calle los Pinos, San Agustín-Bahía Feliz, San Bartolomé de Tirajana",
@@ -1146,5 +1146,19 @@
     "status": "new",
     "added_at": "2026-10-01",
     "fingerprint": "23-calle-independiente-llanos-lucia-santa-taganana-tirajana-vecindario|"
+  },
+  {
+    "id": "idealista-5f8f714b",
+    "title": "Piso en Calle Doctor Alfonso Chiscano Díaz, 20, Negrín, Las Palmas de Gran Canaria",
+    "price": 386100,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Calle Doctor Alfonso Chiscano Díaz, 20, Negrín, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112720013/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/eb/07/fe/1479791711.jpg",
+    "status": "new",
+    "added_at": "2026-10-03",
+    "fingerprint": "20-alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
   }
 ]
