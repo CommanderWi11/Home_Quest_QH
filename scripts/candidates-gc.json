@@ -428,7 +428,7 @@
     "location": "Calle Párroco Hernández Benítez, 23, Barrial-San Isidro-Marmolejos, Gáldar",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/106552571/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/97/fb/4a/1401797949.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/64/dc/6a/1401797993.jpg",
     "status": "new",
     "added_at": "2026-08-28",
     "fingerprint": "23-adosado-barrial-benitez-calle-galdar-hernandez-isidro-marmolejos-parroco-san|"
@@ -1160,5 +1160,47 @@
     "status": "new",
     "added_at": "2026-10-03",
     "fingerprint": "20-alfonso-calle-canaria-chiscano-diaz-doctor-gran-negrin-palmas|"
+  },
+  {
+    "id": "idealista-739c3ed2",
+    "title": "Finca rústica en Diseminado Montañeta, 61, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
+    "price": 450000,
+    "bedrooms": 9,
+    "year": null,
+    "location": "Diseminado Montañeta, 61, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/100598394/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/f1/58/d0/1479680054.jpg",
+    "status": "new",
+    "added_at": "2026-10-06",
+    "fingerprint": "61-canaria-diseminado-finca-gran-hoyos-marzagan-montaneta-palmas-rustica|"
+  },
+  {
+    "id": "idealista-bc6ac4a6",
+    "title": "Chalet adosado en Calle Pantana, 31, Cruce de Arinaga, Agüimes",
+    "price": 260000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Calle Pantana, 31, Cruce de Arinaga, Agüimes",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112703920/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/9d/81/2c/1480336277.jpg",
+    "status": "new",
+    "added_at": "2026-10-06",
+    "fingerprint": "31-adosado-aguimes-arinaga-calle-cruce-pantana|"
+  },
+  {
+    "id": "idealista-4a157c96",
+    "title": "Casa o chalet independiente en Los Pasitos, Mogán interior, Mogán",
+    "price": 445000,
+    "bedrooms": 4,
+    "year": null,
+    "location": "Los Pasitos, Mogán interior, Mogán",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112741819/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/74/ed/aa/1480544111.jpg",
+    "status": "new",
+    "added_at": "2026-10-06",
+    "fingerprint": "independiente-interior-mogan-pasitos|"
   }
 ]

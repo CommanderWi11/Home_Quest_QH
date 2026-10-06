@@ -338,7 +338,7 @@
   {
     "id": "idealista-a7bbe769",
     "title": "Piso en Calle Camelia, 19, Siete Palmas, Las Palmas de Gran Canaria",
-    "price": 345000,
+    "price": 335000,
     "bedrooms": 3,
     "year": null,
     "location": "Calle Camelia, 19, Siete Palmas, Las Palmas de Gran Canaria",
@@ -702,13 +702,13 @@
   {
     "id": "idealista-de5a1312",
     "title": "Casa o chalet en Lugar Lomo de Cuesta Ramón, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
-    "price": 145000,
+    "price": 130000,
     "bedrooms": 3,
     "year": null,
     "location": "Lugar Lomo de Cuesta Ramón, Marzagán-Los Hoyos-La Montañeta, Las Palmas de Gran Canaria",
     "source": "idealista",
     "url": "https://www.idealista.com/inmueble/111641838/",
-    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/08/e9/e9/1443297254.jpg",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/ff/1e/7c/1480692757.jpg",
     "status": "new",
     "added_at": "2026-10-03",
     "fingerprint": "canaria-cuesta-gran-hoyos-lomo-lugar-marzagan-montaneta-palmas-ramon|"
@@ -726,5 +726,19 @@
     "status": "new",
     "added_at": "2026-10-03",
     "fingerprint": "calle-canaria-gran-lomo-palmas-plana-siete|"
+  },
+  {
+    "id": "idealista-223df12d",
+    "title": "Chalet pareado en Calle el Molino, Tafira, Las Palmas de Gran Canaria",
+    "price": 495000,
+    "bedrooms": 3,
+    "year": null,
+    "location": "Calle el Molino, Tafira, Las Palmas de Gran Canaria",
+    "source": "idealista",
+    "url": "https://www.idealista.com/inmueble/112743701/",
+    "photo": "https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/31/91/92/1480609077.jpg",
+    "status": "new",
+    "added_at": "2026-10-06",
+    "fingerprint": "calle-canaria-gran-molino-palmas-pareado-tafira|"
   }
 ]
